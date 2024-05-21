@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.headerText{
+  font-size: larger;
+  /* font-weight: bold; */
+  font-family: "Poppins", sans-serif;
+  margin-right: 1vw;
+  color: white;
+ 
+}
+.navdropdownitem {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  
+  border: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.navdropdownitem:hover,
+.navdropdownitem:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #b4c6d8;
+}
+
+.navbardropdowntitle {
+  color: white !important;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+}
+
+.offcanvasclosebtn,
+.offcanvas-toggle-btn {
+  color: white !important;
+ 
+}

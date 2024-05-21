@@ -1,5 +1,6 @@
 import React ,  { useEffect, useState } from 'react'
 import Page from './page/page'
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
