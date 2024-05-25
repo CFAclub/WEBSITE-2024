@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@500&family=Lobster&family=Playfair+Display&family=Raleway:wght@600&family=Roboto+Slab:wght@500&family=Sedan+SC&display=swap');
+
+.galleryContainer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.imagesWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imageContainer {
+    text-align: center;
+    margin: 10px;
+}
+
+.ellipticalImage {
+    width: 375px;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 50% /70%;
+}
+
+.imageTitle {
+    font-family: "Sedan SC", serif;
+    color: #F5F5DC;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.icon {
+    color: white;
+}
+
+.imageTitle2 {
+    font-family: "Sedan SC", serif;
+    color: #F5F5DC;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.button {
+    margin-top: 30px;
+    background-color: #1A2D2C;
+    font-weight: bolder;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ellipticalImage {
+        width: 300px;
+        height: 192px;
+    }
+
+    .imageTitle {
+        font-size: 15px;
+    }
+
+    .imageTitle2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ellipticalImage {
+        width: 200px;
+        height: 128px;
+    }
+
+    .imageTitle {
+        font-size: 15px;
+    }
+
+    .imageTitle2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagesWrapper {
+        flex-direction: column;
+    }
+
+    .imageTitle {
+        font-size: 15px;
+    }
+
+    .imageTitle2 {
+        font-size: 15px;
+    }
+
+    .ellipticalImage {
+        width: 200px;
+        height: 128px;
+    }
+}
