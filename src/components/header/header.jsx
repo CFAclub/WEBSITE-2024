@@ -14,7 +14,7 @@ function Header() {
   return (
     <div className="header">
       {["sm"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="mb-3 bg-black">
+        <Navbar key={expand} expand={expand} className="bg-black">
           <Container fluid>
             <div>
               <Link to="/">
