@@ -36,30 +36,30 @@ function Hero() {
           </div>
 
           <div className="mx-[5vh] text-xl">
-            <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
-              <a
-                target="_blank"
-                href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
-              >
-                Collaborate with us!
-              </a>
-            </button>
-            <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#4299e1]">
-              <a
-                target="_blank"
-                href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
-              >
-                Collaborate with us!
-              </a>
-            </button>
-            <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
             <a
-                target="_blank"
-                href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
-              >
+              target="_blank"
+              href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
+            >
+              <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
-              </a>
-            </button>
+              </button>
+            </a>
+            <a
+              target="_blank"
+              href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
+            >
+              <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
+                Collaborate with us!
+              </button>
+            </a>
+            <a
+              target="_blank"
+              href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
+            >
+              <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
+                Collaborate with us!
+              </button>
+            </a>
           </div>
         </div>
 
