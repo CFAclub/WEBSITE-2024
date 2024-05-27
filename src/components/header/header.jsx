@@ -12,7 +12,7 @@ import '../../index.css';
 
 function Header() {
   return (
-    <div className="header">
+    <div className={styles.header}>
       {["sm"].map((expand) => (
         <Navbar key={expand} expand={expand} className="mb-3 bg-black">
           <Container fluid>

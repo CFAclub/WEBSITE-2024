@@ -1,10 +1,14 @@
 import React from 'react'
-
+import Header from '../components/header/header'
+import Footer from '../components/footer/footer'
 function Consulting() {
   return (
-   <> <div>
+   <>
+   <Header /> <div>
       <h1>hey this is consulting</h1>
       </div>
+      <Footer />
+
       </>
   )
 }
