@@ -1,12 +1,11 @@
 import React from 'react'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
+import AnalyticsComponent from '../components/Analytics/Analytics';
 function Analytics() {
   return (
     <> <Header />
-    <div>
-      <h1>hey this is analytics</h1>
-      </div>
+    <AnalyticsComponent/>
       <Footer />
 
       </>
