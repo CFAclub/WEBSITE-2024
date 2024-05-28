@@ -6,7 +6,7 @@ import insta from "../../assets/hero/insta.png";
 function Hero() {
   return (
     <>
-      <div className="text-white border-red-700 border-0  h-[95vh]  font-serif flex bg-black">
+      <div className="text-white border-red-700 border-0  h-[95vh]  font-serif flex bg-black" >
         <div className="border-0 border-green-600 w-[50%]">
           <div id="heading" className="  text-7xl my-[5vh] mx-[5vh] mb-[3vh]">
             CFA Club
@@ -68,7 +68,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className=" bg-greyishh text-white py-[10vh] h-[140vh]">
+      <div className=" bg-greyishh text-white py-[10vh] h-[140vh]" id='hero-section'>
         <div className="m-[5vh] flex flex-col gap-5">
           <div id="header" className="text-3xl font-bold">
             WHO WE ARE

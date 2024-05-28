@@ -14,7 +14,15 @@ import { Link } from 'react-router-dom';
 import { faMapMarkerAlt, faPhone, faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+
 function Footer() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <>
       <div className={styles.container}>
@@ -38,7 +46,7 @@ function Footer() {
           <div className={`mb-3 ${styles.responsive }`}>
             <h4 className='text-2xl mb-2 font-semibold '>Quick Links</h4>
             <ul>
-            <a href='/' style={{color : 'white' ,textDecoration :'none'}}><FontAwesomeIcon icon={faArrowRight} />About Us</a>
+            <a href="#hero-section" style={{color : 'white' ,textDecoration :'none'}}><FontAwesomeIcon icon={faArrowRight} onClick={() => scrollToSection('hero-section')}/>About Us</a>
             <br/>
            <Link to="/team" style={{color : 'white' ,textDecoration :'none'}}> <FontAwesomeIcon icon={faArrowRight} />
             Team</Link>
