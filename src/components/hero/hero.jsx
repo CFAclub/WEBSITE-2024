@@ -38,7 +38,8 @@ function Hero() {
           <div className="mx-[5vh] text-xl">
             <a
               target="_blank"
-              href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
+              href="https://mail.google.com/mail/u/0/?fs=1&to=cfa@iiti.ac.in&su=Request+to+Collaborate+with+CFA+Club,IIT+Indore&body=Hi!+I+want+to+collaborate+with+CFA.%0D%0A%0D%0A(This+mail+was+auto-generated)&tf=cm
+              "
             >
               <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
@@ -46,7 +47,8 @@ function Hero() {
             </a>
             <a
               target="_blank"
-              href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
+              href="https://mail.google.com/mail/u/0/?fs=1&to=cfa@iiti.ac.in&su=Request+to+Collaborate+with+CFA+Club,IIT+Indore&body=Hi!+I+want+to+collaborate+with+CFA.%0D%0A%0D%0A(This+mail+was+auto-generated)&tf=cm
+              "
             >
               <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
@@ -54,7 +56,7 @@ function Hero() {
             </a>
             <a
               target="_blank"
-              href="mailto:cfa@iiti.ac.in?subject=Request%20to%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)"
+              href="https://mail.google.com/mail/u/0/?fs=1&to=cfa@iiti.ac.in&su=Request+to+Collaborate+with+CFA+Club,IIT+Indore&body=Hi!+I+want+to+collaborate+with+CFA.%0D%0A%0D%0A(This+mail+was+auto-generated)&tf=cm"
             >
               <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
@@ -62,7 +64,7 @@ function Hero() {
             </a>
           </div>
         </div>
-
+{/* outermost flex-item-2 */}
         <div className=" border-0 border-blue-600 w-[50%] ">
           <img width={"90%"} src={heroImg} className="" />
         </div>
