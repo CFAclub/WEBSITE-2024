@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import heroImg from "../../assets/hero/chakra.png";
 import li from "../../assets/hero/li.png";
@@ -6,6 +6,9 @@ import insta from "../../assets/hero/insta.png";
 import confetti from 'canvas-confetti';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../../styles/hero.css';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Hero() {
 
@@ -34,18 +37,51 @@ function Hero() {
 
   };
 
+
+
+  const left ={
+    hidden :{x:-500,opacity:0, },
+    visible :{x:0 ,opacity:1 ,transition :{duration:0.6,delay:0.2},}
+  }
+  const top ={
+    hidden :{y:-500,opacity:0, },
+    visible :{y:0 ,opacity:1 ,transition :{duration:0.6,}}
+  }
+  const right ={
+    hidden :{x:500,opacity:0, },
+    visible :{x:0 ,opacity:1 ,transition :{duration:0.6,delay:0.8},}
+  }
+  const smaller_top ={
+    hidden :{y:-90,opacity:0, },
+    visible :{y:0 ,opacity:1 ,transition :{duration:0.6}}
+  }
+
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
+
   return (
     <>
-      <div className="text-white border-red-700 border-0  h-[95vh]  font-serif flex bg-black" >
-        <div className="border-0 border-green-600 w-[50%]">
-          <div id="heading" className="  text-7xl my-[5vh] mx-[5vh] mb-[3vh]">
+      <div className="text-white border-red-700 border-0 font-serif flex bg-black" >
+        {/* outermost flex-item-1 */}
+        <div className={`border-0 border-green-600 sm:w-[50%] w-[100%]`}>
+          <motion.div id="heading" className="text-7xl my-[5vh] mx-[5vh] mb-[3vh]" 
+          variants={smaller_top} animate={control} initial="hidden" whileInView="visible">
             CFA Club
-          </div>
-          <div className="  w-[70%] text-xl mx-[5vh]">
+          </motion.div>
+          <motion.div className=" w-[70%] text-xl mx-[5vh]"
+          variants={smaller_top} animate={control} initial="hidden" whileInView="visible">
             We provide a platform for students to make a seamless transition
             into the world of Management Consulting, Finance and Data Analytics.
-          </div>
-          <div className="text-xl font-bold mx-[5vh] my-[5vh]">
+          </motion.div>
+          <motion.div className=" text-xl font-bold mx-[5vh] my-[5vh]" 
+           variants={left} animate={control} initial="hidden" whileInView="visible">
             FOLLOW US
             <div className="flex gap-3 my-4">
               <a
@@ -63,84 +99,53 @@ function Hero() {
                 <img src={insta} className="w-8" />
               </a>
             </div>
-          </div>
-
-          <div className="mx-[5vh] text-xl">
+          </motion.div>
 
 
-            <a 
+          <a 
               href={gmailLink} 
               target="_blank" 
               rel="noopener noreferrer" 
               ref={linkRef} 
               style={{ display: 'none' }}
             >
-              {/* Hidden Link */}
+              Hidden Link
             </a>
+
+
+          <motion.div id="collaborate-with-us" className="flex flex-col mx-[5vh] md:mb-[2vh] mb-[3vh] text-md md:text-xl" variants={right} animate={control} initial="hidden" whileInView="visible">
+
+           
             
             <ToastContainer/>
-
-
-              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
+              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
+              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
               </button>
-            <a
-              target="_blank"
-              href="https://mail.google.com/mail/u/0/?fs=1&to=cfa@iiti.ac.in&su=Request+to+Collaborate+with+CFA+Club,IIT+Indore&body=Hi!+I+want+to+collaborate+with+CFA.%0D%0A%0D%0A(This+mail+was+auto-generated)&tf=cm
-              "
-            >
-              <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
+              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
+              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
               </button>
-            </a>
-            <a
-              target="_blank"
-              href="https://mail.google.com/mail/u/0/?fs=1&to=cfa@iiti.ac.in&su=Request+to+Collaborate+with+CFA+Club,IIT+Indore&body=Hi!+I+want+to+collaborate+with+CFA.%0D%0A%0D%0A(This+mail+was+auto-generated)&tf=cm"
-            >
-              <button class="bg-white my-2 hover:translate-x-5 transition-all  text-black w-[65%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
+              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
+              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
                 Collaborate with us!
               </button>
-            </a>
-          </div>
+          </motion.div>
         </div>
-{/* outermost flex-item-2 */}
-        <div className=" border-0 border-blue-600 w-[50%] ">
+
+        {/* outermost flex-item-2 */}
+        {<div className="sm:w-[50%] sm:block hidden">
           <img width={"90%"} src={heroImg} className="" />
-        </div>
+        </div>}
       </div>
 
-      <div className=" bg-greyishh text-white py-[10vh] h-[140vh]" id='hero-section'>
-        <div className="m-[5vh] flex flex-col gap-5">
-          <div id="header" className="text-3xl font-bold">
-            WHO WE ARE
-          </div>
-          <div id="info" className="text-xl font-thin">
-            Consulting Finance & Analytics Club, IIT Indore, widely known as
-            CFA, is a premier student group operating under the Sci-Techl Board
-            of IIT Indore since 2019.
-          </div>
-          <div id="header" className="text-3xl font-bold">
-            AAAAAAAAAAAAAAA
-          </div>
-          <hr />
-        </div>
 
-        <div className="m-[5vh] flex flex-col gap-5">
-          <div id="header" className="text-3xl font-bold">
-            WHO WE ARE
-          </div>
-          <div id="info" className="text-xl font-thin">
-            Consulting Finance & Analytics Club, IIT Indore, widely known as
-            CFA, is a premier student group operating under the Sci-Techl Board
-            of IIT Indore since 2019.
-          </div>
-          <div id="header" className="text-3xl font-bold">
-            AAAAAAAAAAAAAAA
-          </div>
-          <hr />
-        </div>
 
-        <div className="m-[5vh] flex flex-col gap-5">
+
+
+      <div className=" bg-greyishh text-white py-[5vh]" id='hero-section'>
+        <motion.div className="m-[5vh] flex flex-col gap-5" 
+        variants={left} animate={control} initial="hidden" whileInView="visible">
           <div id="header" className="text-3xl font-bold">
             WHO WE ARE
           </div>
@@ -149,11 +154,43 @@ function Hero() {
             CFA, is a premier student group operating under the Sci-Techl Board
             of IIT Indore since 2019.
           </div>
-          <div id="header" className="text-3xl font-bold">
+          <div id="header" className="sm:text-3xl font-bold text-xl">
             AAAAAAAAAAAAAAA
           </div>
           <hr />
-        </div>
+        </motion.div>
+
+        <motion.div className="m-[5vh] flex flex-col gap-5" 
+        variants={right} animate={control} initial="hidden" whileInView="visible">
+          <div id="header" className="text-3xl font-bold">
+            WHO WE ARE
+          </div>
+          <div id="info" className="text-xl font-thin">
+            Consulting Finance & Analytics Club, IIT Indore, widely known as
+            CFA, is a premier student group operating under the Sci-Techl Board
+            of IIT Indore since 2019.
+          </div>
+          <div id="header" className="sm:text-3xl font-bold text-xl">
+            AAAAAAAAAAAAAAA
+          </div>
+          <hr />
+        </motion.div>
+
+        <motion.div className="m-[5vh] flex flex-col gap-5" 
+        variants={left} animate={control} initial="hidden" whileInView="visible">
+          <div id="header" className="text-3xl font-bold">
+            WHO WE ARE
+          </div>
+          <div id="info" className="text-xl font-thin">
+            Consulting Finance & Analytics Club, IIT Indore, widely known as
+            CFA, is a premier student group operating under the Sci-Techl Board
+            of IIT Indore since 2019.
+          </div>
+          <div id="header" className="sm:text-3xl font-bold text-xl">
+            AAAAAAAAAAAAAAA
+          </div>
+          <hr />
+        </motion.div>
       </div>
     </>
   );
