@@ -12,9 +12,6 @@ function Home() {
       <Hero/>
       <Divisions />
       <Team />
-      <div>
-        <h1>hey this is home</h1>
-      </div>
       <Footer />
     </>
 

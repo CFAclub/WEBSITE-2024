@@ -1,16 +1,16 @@
-import React from 'react'
-import Header from '../components/header/header'
-import Footer from '../components/footer/footer'
-function Consulting() {
-  return (
-   <>
-   <Header /> <div>
-      <h1>hey this is consulting</h1>
-      </div>
-      <Footer />
+import React from 'react';
+import Header from '../components/header/header';
+import Footer from '../components/footer/footer';
+import ConsultingComponent from '../components/consulting/Consulting'; 
 
-      </>
-  )
+function ConsultingPage() {
+  return (
+    <>
+      <Header />
+      <ConsultingComponent />
+      <Footer />
+    </>
+  );
 }
 
-export default Consulting
+export default ConsultingPage;
