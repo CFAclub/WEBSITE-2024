@@ -4,9 +4,10 @@ import Footer from '../components/footer/footer'
 import AnalyticsComponent from '../components/Analytics/Analytics';
 function Analytics() {
   return (
-    <> <Header />
+    <> 
+    <Header />
     <AnalyticsComponent/>
-      <Footer />
+    <Footer />
 
       </>
   )
