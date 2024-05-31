@@ -14,7 +14,16 @@ import { Link } from 'react-router-dom';
 import { faMapMarkerAlt, faPhone, faEnvelope  } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+
 function Footer() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  const cfaemail = "https://mail.google.com/mail/?view=cm&fs=1&to=cfa@iiti.ac.in&su=Requestto%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)";
   return (
     <>
       <div className={styles.container}>
@@ -22,11 +31,11 @@ function Footer() {
           <div className={styles.responsive}>
             <h4 className="text-2xl mb-2 font-semibold ">Our office</h4>
             <ul>
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> Indian Institute of Technology Indore <br/>Madhya Pradesh India - 453552
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> <a href="http://iiti.ac.in" target="_blank" rel="noopener noreferrer"> Indian Institute of Technology Indore<br/>Madhya Pradesh India - 453552 </a>
               <br/>
              <FontAwesomeIcon icon={faPhone} /> Phone: 0731 243 8700
              <br/>
-              <FontAwesomeIcon icon={faEnvelope} /> Email: info@iiti.ac.in
+              <FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:cfa@iiti.ac.in">cfa@iiti.ac.in</a>
               <br/>
               <a href='https://www.instagram.com/cfaclub_iiti/' target='_blank'><span><FontAwesomeIcon icon={faInstagram} style={{height : '25px' , width : '25px' , margin : '4px' , color :'white'}}/></span></a>
               <a href='https://www.linkedin.com/company/cfa-club-iit-indore/' target='_blank'><span><FontAwesomeIcon icon={faLinkedin} style={{height : '25px' , width : '25px' , margin : '4px' ,color :'white'}} /></span></a>
@@ -38,7 +47,7 @@ function Footer() {
           <div className={`mb-3 ${styles.responsive }`}>
             <h4 className='text-2xl mb-2 font-semibold '>Quick Links</h4>
             <ul>
-            <a href='/' style={{color : 'white' ,textDecoration :'none'}}><FontAwesomeIcon icon={faArrowRight} />About Us</a>
+            <a href="#hero-section" style={{color : 'white' ,textDecoration :'none'}}><FontAwesomeIcon icon={faArrowRight} onClick={() => scrollToSection('hero-section')}/>About Us</a>
             <br/>
            <Link to="/team" style={{color : 'white' ,textDecoration :'none'}}> <FontAwesomeIcon icon={faArrowRight} />
             Team</Link>

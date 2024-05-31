@@ -3,7 +3,7 @@ import styles from '../../styles/divisions.module.css';
 
 const Divisions = () => {
     return (
-        <div className={styles.galleryContainer}>
+        <div className={styles.galleryContainer}  id="division-section">
             <h1 className={styles.heading}>DIVISIONS</h1>
             <div className={styles.imagesWrapper}>
                 <div className={styles.imageContainer}>

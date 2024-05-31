@@ -33,7 +33,7 @@
 .navdropdownitem:focus {
   color: #16181b;
   text-decoration: none;
-  background-color: #b4c6d8;
+  background-color: #b4c6d8 !important ;
 }
 
 .navbardropdowntitle {
@@ -58,3 +58,20 @@
   top: 0;
   z-index: 1000;
 }
+
+
+/*dropdown hover */
+.navbardropdown {
+  position: relative;
+}
+
+.navbardropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: pink;
+}
+
+.navbardropdown.show .dropdown-menu {
+  display: block;
+}
+
