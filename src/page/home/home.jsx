@@ -4,17 +4,16 @@ import Footer from '../../components/footer/footer'
 import Divisions from '../../components/divisions/divisions'
 import Team from '../../components/team/team'
 import Hero from '../../components/hero/hero'
+import Subscribe from '../../components/Subscribe/Subscribe'
 
 function Home() {
   return (
     <>
       <Header />
-      <Hero/>
+      <Hero />
       <Divisions />
       <Team />
-      <div>
-        <h1>hey this is home</h1>
-      </div>
+      <Subscribe />
       <Footer />
     </>
 
