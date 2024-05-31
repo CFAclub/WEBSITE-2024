@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../../styles/hero.css';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import {useTypewriter, Cursor, Typewriter} from "react-simple-typewriter";
 
 function Hero() {
 
@@ -36,8 +37,6 @@ function Hero() {
     }, 1500);
 
   };
-
-
 
   const left ={
     hidden :{x:-500,opacity:0, },
@@ -68,20 +67,35 @@ function Hero() {
 
   return (
     <>
-      <div className="text-white border-red-700 border-0 font-serif flex bg-black" >
+      <div className="text-white border-red-700 border-0 font-serif flex bg-black overflow-x-hidden" >
         {/* outermost flex-item-1 */}
         <div className={`border-0 border-green-600 sm:w-[50%] w-[100%]`}>
           <motion.div id="heading" className="text-7xl my-[5vh] mx-[5vh] mb-[3vh]" 
           variants={smaller_top} animate={control} initial="hidden" whileInView="visible">
             CFA Club
+            <div className="lg:block my-2 py-2 hidden font-bold text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text"
+            >
+              <Typewriter
+                words={['Consulting ...', 'Finance ...', 'Analytics ...',]}
+                loop={0}
+                cursor
+                cursorStyle='|'
+                cursorColor="rgb(37,99,235)"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1200}
+              />
+            </div>
+           
           </motion.div>
           <motion.div className=" w-[70%] text-xl mx-[5vh]"
           variants={smaller_top} animate={control} initial="hidden" whileInView="visible">
-            We provide a platform for students to make a seamless transition
-            into the world of Management Consulting, Finance and Data Analytics.
+            We provide a platform for students to make a seamless transition into the world of Management Consulting, Finance and Data Analytics.
           </motion.div>
+          
+          
           <motion.div className=" text-xl font-bold mx-[5vh] my-[5vh]" 
-           variants={left} animate={control} initial="hidden" whileInView="visible">
+           variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
             FOLLOW US
             <div className="flex gap-3 my-4">
               <a
@@ -143,9 +157,9 @@ function Hero() {
 
 
 
-      <div className=" bg-greyishh text-white py-[5vh]" id='hero-section'>
+      <div className=" bg-[#0d1616] text-white py-[5vh]" id='hero-section'>
         <motion.div className="m-[5vh] flex flex-col gap-5" 
-        variants={left} animate={control} initial="hidden" whileInView="visible">
+        variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
           <div id="header" className="text-3xl font-bold">
             WHO WE ARE
           </div>
@@ -177,7 +191,7 @@ function Hero() {
         </motion.div>
 
         <motion.div className="m-[5vh] flex flex-col gap-5" 
-        variants={left} animate={control} initial="hidden" whileInView="visible">
+        variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
           <div id="header" className="text-3xl font-bold">
             WHO WE ARE
           </div>
