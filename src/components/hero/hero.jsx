@@ -44,7 +44,7 @@ function Hero() {
   }
   const top ={
     hidden :{y:-500,opacity:0, },
-    visible :{y:0 ,opacity:1 ,transition :{duration:0.6,}}
+    visible :{y:0 ,opacity:1 ,transition :{duration:0.6}}
   }
   const right ={
     hidden :{x:500,opacity:0, },
