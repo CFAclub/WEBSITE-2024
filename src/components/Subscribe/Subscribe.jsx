@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import "../../styles/subscribe.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-// import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 // import { db } from '../../utils/firebase';
 
 export default function Subscribe() {
-  // const [email, setEmail] = useState("");
-  // const subscribe = async () => {
-  //     try {
-  //         const emailListRef = doc(db, 'emails', "emailList");
+  const [email, setEmail] = useState("");
+  const subscribe = async () => {
+      try {
+          const emailListRef = doc(db, 'emails', "emailList");
 
-  //         await updateDoc(emailListRef, {
-  //             emails: arrayUnion(email)
-  //         });
-  //     } catch (e) {
-  //         console.error("Error adding document: ", e);
-  //     }
-  // }
+          await updateDoc(emailListRef, {
+              emails: arrayUnion(email)
+          });
+      } catch (e) {
+          console.error("Error adding document: ", e);
+      }
+  }
 
   return (
     <>
@@ -37,8 +37,10 @@ export default function Subscribe() {
                 type="email"
                 className="sub-input"
                 placeholder="Enter your email here"
+
+                onChange={(e) => { setEmail(e.target.value) }}
               />
-              <button className="btnsubscribe" type="submit">
+              <button className="btnsubscribe" type="submit" onClick={() => { subscribe() }}>
                 Subscribe
               </button>
             </div>
