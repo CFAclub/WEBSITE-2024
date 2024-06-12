@@ -56,7 +56,7 @@ function Header() {
           <Container fluid>
             <div>
               <Link to="/">
-                <img src={cfalogo} alt="CFA logo" style={{marginLeft: '1vw',height : '8vh' }} />
+                <img src={cfalogo} alt="CFA logo"  className={styles.cfalogo} />
               </Link>
             </div>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} style={{backgroundColor : '#8292a7'}}/>
