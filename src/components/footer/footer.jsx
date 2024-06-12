@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight  } from '@fortawesome/free-solid-svg-icons';
+// import { faArrowRight  } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 // import { faInstagram ,faLinkedIn } from '@fortawesome/free-brands-svg-icons';
 
@@ -29,36 +29,37 @@ function Footer() {
       <div className={styles.container}>
       
           <div className={styles.responsive}>
-            <h4 className="text-2xl mb-2 font-semibold ">Our office</h4>
+            <h4 className="text-2xl mb-2 font-semibold " style={{ fontFamily: "Montserrat, sans-serif" }}
+            >Our office</h4>
             <ul>
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> <a href="http://iiti.ac.in" target="_blank" rel="noopener noreferrer"> Indian Institute of Technology Indore<br/>Madhya Pradesh India - 453552 </a>
+              <FontAwesomeIcon icon={faMapMarkerAlt} /> <a href="http://iiti.ac.in" target="_blank" rel="noopener noreferrer" className={styles.footerlinks}> Indian Institute of Technology Indore<br/>Madhya Pradesh India - 453552 </a>
               <br/>
              <FontAwesomeIcon icon={faPhone} /> Phone: 0731 243 8700
              <br/>
-              <FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:cfa@iiti.ac.in">cfa@iiti.ac.in</a>
+              <FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:cfa@iiti.ac.in" className={styles.footerlinks}>cfa@iiti.ac.in</a>
               <br/>
-              <a href='https://www.instagram.com/cfaclub_iiti/' target='_blank'><span><FontAwesomeIcon icon={faInstagram} style={{height : '25px' , width : '25px' , margin : '4px' , color :'white'}}/></span></a>
-              <a href='https://www.linkedin.com/company/cfa-club-iit-indore/' target='_blank'><span><FontAwesomeIcon icon={faLinkedin} style={{height : '25px' , width : '25px' , margin : '4px' ,color :'white'}} /></span></a>
+              <a href='https://www.instagram.com/cfaclub_iiti/' target='_blank'><span><FontAwesomeIcon icon={faInstagram} style={{height : '25px' , width : '25px' , margin : '4px 4px 4px -2px' , color :'white'}} className={styles.footerlinks}/></span></a>
+              <a href='https://www.linkedin.com/company/cfa-club-iit-indore/' target='_blank'><span><FontAwesomeIcon icon={faLinkedin} style={{height : '25px' , width : '25px' , margin : '4px' ,color :'white'}} className={styles.footerlinks}/></span></a>
              
                 
             </ul>
           </div>
 
           <div className={`mb-3 ${styles.responsive }`}>
-            <h4 className='text-2xl mb-2 font-semibold '>Quick Links</h4>
+            <h4 className='text-2xl mb-2 font-semibold ' style={{ fontFamily: "Montserrat, sans-serif" }} >Quick Links</h4>
             <ul>
-            <a href="#hero-section" style={{color : 'white' ,textDecoration :'none'}}><FontAwesomeIcon icon={faArrowRight} onClick={() => scrollToSection('hero-section')}/>About Us</a>
+            <a href="#hero-section" className={styles.footerlinks} onClick={() => scrollToSection('hero-section')}>➤ About Us</a>
             <br/>
-           <Link to="/team" style={{color : 'white' ,textDecoration :'none'}}> <FontAwesomeIcon icon={faArrowRight} />
-            Team</Link>
+           <Link to="/team"  className={styles.footerlinks}> 
+           ➤ Team</Link>
             <br/>
             
             {/* <FontAwesomeIcon icon={faArrowRight} />Our Projects */}
-            <Link to="/projects" style={{color : 'white' ,textDecoration :'none'}}> <FontAwesomeIcon icon={faArrowRight} />
-            Our Projects</Link>
+            <Link to="/projects"  className={styles.footerlinks}>
+            ➤ Our Projects</Link>
             <br/>
             {/* <FontAwesomeIcon icon={faArrowRight} />Gallery */}
-            <a href='/' style={{color : 'white' ,textDecoration :'none'}}><FontAwesomeIcon icon={faArrowRight} />Gallery</a>
+            <Link to="/gallery"  ><span className={styles.footerlinks}>➤ Gallery</span></Link>
             <br/>
             
             </ul>

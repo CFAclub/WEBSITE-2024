@@ -8,6 +8,7 @@ import Analytics from './analytics'
 import Projects from './projects'
 import Resources from './resources'
 import Team from './team'
+import Gallery from './gallery'
 
 function Page() {
   return (
@@ -21,6 +22,7 @@ function Page() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
       </>

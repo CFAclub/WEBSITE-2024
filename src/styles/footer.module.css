@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .container{
   color: white;
   display: flex;
@@ -10,6 +11,19 @@
     min-height: 30vh;
     background-color: #1A2D2C;
   }
+
+  .footerlinks {
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    transition: color 0.2s ease, transform 0.4s ease;
+  }
+  
+  .footerlinks:hover {
+    transform: scale(1.15) !important;
+    color: rgb(136, 201, 255) !important;
+  }
+  
 /* .responsive{
   width: 33.33%;
 } */
@@ -39,7 +53,10 @@
     height: auto;
     min-height: 5vh;
     background-color: #1A2D2C;
+    font-family: "Montserrat", sans-serif;
   }
 .responsive2  :hover{
   color: #0077ff;
 }
+
+

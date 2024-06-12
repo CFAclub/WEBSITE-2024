@@ -3,11 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
 .headerText{
   font-size: larger;
   /* font-weight: bold; */
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Anek Devanagari", sans-serif;
   margin-right: 1vw;
   color: white;
  
@@ -17,7 +18,8 @@
   width: 100%;
   padding: 0.25rem 1.5rem;
   clear: both;
-  font-weight: 400;
+  font-weight: 500 !important;
+  font-size: large;
   color: #212529;
 
   text-align: inherit;
@@ -31,23 +33,37 @@
 
 .navdropdownitem:hover,
 .navdropdownitem:focus {
-  color: #16181b;
-  text-decoration: none;
-  background-color: #b4c6d8 !important ;
+  color: #13a7d0 !important;
+    text-decoration: none;
+    background-color: #2e3b4e !important;
+
+  transition: background-color 0.3s ease;
+  /* scale: 1.1; */
 }
 
+.clicklinks:hover{
+  transition: transform 0.4s ease;
+  transform: scale(1.1);
+  color: rgb(136, 201, 255)  !important;
+  /* scale: 1.1 !important; */
+  /* text-shadow: currentColor 0px 0px 10px; */
+}
 .navbardropdowntitle {
   color: white !important;
   /* font-family: 'Times New Roman', Times, serif; */
   /* font-family: "Poppins", sans-serif; */
   /* font-family: "Teachers", sans-serif; */
-  font-family: "Sedan SC", serif;
+  /* font-family: "Sedan SC", serif; */
+  font-family: "Anek Devanagari", sans-serif;
   font-weight: 400;
   font-style: normal;
-  
   font-size: 1.4rem;
 }
-
+.navbardropdowntitle:hover{
+  
+    color: #07c8fe !important;
+;
+}
 .offcanvasclosebtn,
 .offcanvas-toggle-btn {
   color: white !important;

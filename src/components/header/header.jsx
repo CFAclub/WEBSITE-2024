@@ -73,7 +73,7 @@ function Header() {
                 
               </Offcanvas.Header>
               <Offcanvas.Body >
-                <Nav className={`justify-content-end flex-grow-1 pe-3 ${styles.headerText}`} style={{marginRight : '10vw' }}>
+                <Nav className={`justify-content-end flex-grow-1 pe-3 ${styles.headerText}`} >
                   {/* <NavDropdown title={<span className={styles.navbardropdowntitle}>C-F-A</span>} id={`offcanvasNavbarDropdown-expand-${expand} `}   className={styles.navbardropdown} >
                   <div className={styles.dropdownmenu}>
                   <Link className={styles.navdropdownitem} to="/consulting">Consulting</Link>
@@ -93,12 +93,13 @@ function Header() {
                     <NavDropdown.Item as={Link} className={styles.navdropdownitem} to="/finance">Finance</NavDropdown.Item>
                     <NavDropdown.Item as={Link} className={styles.navdropdownitem} to="/analytics">Analytics</NavDropdown.Item>
                   </NavDropdown>
-                  <Link className={`nav-link text-white`} to="/projects">Projects</Link>
-                  <Link  className={`nav-link text-white`} to="/">Events</Link>
-                  <Link  className={`nav-link text-white`} to="/resources">Resources</Link>
-                  <Link  className={`nav-link text-white `} to="/team">Team</Link>
+                  <Link className={`nav-link text-white mr-4 ml-4 ${styles.clicklinks}`} to="/projects">Projects</Link>
+                  <Link  className={`nav-link text-white mr-4 ml-4 ${styles.clicklinks}`} to="/">Events</Link>
+                  <Link  className={`nav-link text-white mr-4 ml-4 ${styles.clicklinks}`} to="/resources">Resources</Link>
+                  <Link  className={`nav-link text-white mr-4 ml-4 ${styles.clicklinks}`} to="/gallery">Gallery</Link>
+                  <Link  className={`nav-link text-white mr-4 ml-4 ${styles.clicklinks} `} to="/team">Team</Link>
                   {/* <Link  className={`nav-link text-white `} to="/footer" onClick={navigateToBottom}>Contact Us</Link> */}
-                  <a href="#footer"  className={`nav-link text-white `} onClick={navigateToBottom} >Contact Us</a>
+                  <a href="#footer"  className={`nav-link text-white ml-4 ${styles.clicklinks}`} onClick={navigateToBottom} >Contact Us</a>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
