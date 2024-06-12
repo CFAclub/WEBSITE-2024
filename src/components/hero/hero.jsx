@@ -177,7 +177,7 @@ function Hero() {
       <div className=" bg-[#0d1616] text-white py-[5vh]" id='hero-section'>
         <motion.div className="m-[5vh] flex flex-col gap-5" 
         variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
-          <div id="header" className="text-3xl font-bold ">
+          <div id="header" className="text-5xl font-bold ">
             WHO WE ARE
           </div>
           <div id="info" className="text-xl font-thin">

@@ -1,0 +1,117 @@
+
+/* this is styles of left container*/
+
+.subcontainer{
+    display: flex;
+    height: 20vh;
+    background-color: #000000;
+}
+
+.leftcontainer{
+  height: 20vh;
+  /* background-color: blueviolet; */
+  background-color: #000000;
+  width: 50%;
+}
+.rightcontainer{
+  /* background-color: aquamarine; */
+  background-color: #000000;
+  width: 50%;
+  height: 20vh;
+
+}
+ #heading1{
+  color: white;
+  font-stretch: 150%;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+.sub-input{
+  width: 350px; 
+  padding: 0 10px; 
+  font-weight: 500;
+  /* margin-left: 100px; */
+   height: 35px;
+   border: 2px solid #000000;
+   border-radius: 20px;
+   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.sub-input:focus {
+  border-color: #005379; 
+  box-shadow: 0 0 20px rgba(0, 115, 171, 0.5); 
+  outline: none; 
+  font-size: large;
+  font-weight: 500;
+
+}
+.leftcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftcontainer span{
+  color: white;
+  font-size: xx-small;
+} 
+.lowercontainer{
+  margin-top: 2vh;
+  /* display: flex;
+ justify-content: center; 
+  align-items: center;  */
+} 
+
+.btnsubscribe{
+  height: 35px;
+  width: 155px;
+  margin-left: 1vw;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: white;
+  /* border: 2px solid white; */
+  background-color: #1A2D2C;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  border-radius: 5px;
+}
+.btnsubscribe:hover{
+ 
+  background-color: rgb(140, 167, 176);
+  /* scale: 1.03; */
+  color: white;
+
+}
+/* .subscribe{
+  align-self: center;
+  margin-top: 2vh;
+  background-color: #1A2D2C;
+  font-size: 1.5em;
+} */
+@media screen and (max-width: 850px) {
+  .subcontainer{
+    flex-direction: column;
+  }
+  .leftcontainer{
+    width: 100%;
+    background-color: #000000;
+  }
+  .rightcontainer{
+    width: 100%;
+    background-color: #000000;
+  }
+  .sub-input{
+    width: 230px; 
+  }
+  #heading1{
+    font-size: 1.3em;
+  }
+  .btnsubscribe{
+    font-size: 1em;
+    height: 25px;
+    width: 100px;
+  }
+  /* .subscribe{
+    font-size: .8em;
+  } */
+
+}
+
