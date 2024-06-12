@@ -3,8 +3,9 @@
 
 .subcontainer{
     display: flex;
-    height: 20vh;
+    height: 23vh;
     background-color: #000000;
+    padding-bottom: 3vh;
 }
 
 .leftcontainer{
@@ -13,13 +14,7 @@
   background-color: #000000;
   width: 50%;
 }
-.rightcontainer{
-  /* background-color: aquamarine; */
-  background-color: #000000;
-  width: 50%;
-  height: 20vh;
 
-}
  #heading1{
   color: white;
   font-stretch: 150%;
@@ -75,7 +70,7 @@
 }
 .btnsubscribe:hover{
  
-  background-color: rgb(140, 167, 176);
+  background-color: rgb(91, 146, 164);
   /* scale: 1.03; */
   color: white;
 
@@ -86,9 +81,48 @@
   background-color: #1A2D2C;
   font-size: 1.5em;
 } */
+
+
+/*right container css is here*/
+.rightcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  width: 50%;
+  height: 20vh;
+}
+
+#rightcontainer1 {
+  /* height: auto; */
+  width: 90%;
+  background-color: #1A2D2C;
+  color: white;
+  height: 15vh;
+
+}
+
+#mailtext{
+  background-color: #000000;
+  padding: 5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin-left: 16px;
+  font-weight: 600;
+  /* transition: text-color 0.5s ease, transform 0.5s ease; */
+}
+ #mailtext :hover{
+  
+  color: #54918e;
+ }
+
 @media screen and (max-width: 850px) {
   .subcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    height: 40vh;
   }
   .leftcontainer{
     width: 100%;
@@ -98,6 +132,9 @@
     width: 100%;
     background-color: #000000;
   }
+  /* #rightcontainer1{
+    width: 90vw;
+  } */
   .sub-input{
     width: 230px; 
   }
@@ -114,4 +151,3 @@
   } */
 
 }
-
