@@ -177,10 +177,10 @@ function Hero() {
       <div className=" bg-[#0d1616] text-white py-[5vh]" id='hero-section'>
         <motion.div className="m-[5vh] flex flex-col gap-4" 
         variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
-          <div id="header" className="text-4xl font-bold ">
+          <div id="header" className="text-5xl font-bold ">
             WHO WE ARE
           </div>
-          <div id="info" className="text-2xl font-thin">
+          <div id="info" className="text-xl font-thin">
           Established in 2019, the Consulting Finance & Analytics Club (CFA) at IIT Indore is a distinguished student organization under the Sci-Tech Board. CFA is dedicated to fostering expertise and innovation in consulting, finance, and data analytics.
           </div>
           <hr  />
