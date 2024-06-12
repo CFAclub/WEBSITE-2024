@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import heroImg from "../../assets/hero/chakra.png";
 import li from "../../assets/hero/li.png";
 import insta from "../../assets/hero/insta.png";
@@ -10,6 +11,9 @@ import '../../styles/hero.css';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {useTypewriter, Cursor, Typewriter} from "react-simple-typewriter";
+import network from"../../assets/hero/network.png";
+import hns from"../../assets/hero/hanson.png";
+import path from"../../assets/hero/path.png";
 
 function Hero() {
 
@@ -19,7 +23,7 @@ function Hero() {
   // const [toast,setToast] = useState(false);
 
 
-  const handleOnClick = (event) => {
+  const handleOnCollaborate = (event) => {
     event.preventDefault(); // Prevent the default link click
     confetti({
       particleCount: 100,
@@ -132,16 +136,29 @@ function Hero() {
            
             
             <ToastContainer/>
-              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
-              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
-                Collaborate with us!
-              </button>
-              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
-              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
-                Collaborate with us!
-              </button>
-              <button onClick={handleOnClick} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
-              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#48bb78]">
+              
+              <Link to="/projects">
+                <button class="bg-white my-2 hover:translate-x-5 transition-all text-black 
+                lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#00A371]">
+                  Our Projects 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" className="inline">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                  </svg>
+                </button>
+              </Link>
+
+              <Link to="/">
+                <button class="bg-white my-2 hover:translate-x-5 transition-all text-black 
+                lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#6983CA]">
+                  Discover Events
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16" className="inline">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                  </svg>
+                </button>
+              </Link>
+              
+              <button onClick={handleOnCollaborate} class="bg-white my-2 hover:translate-x-5 transition-all text-black 
+              lg:w-[65%] px-4 box-border md:w-[80%] sm:w-[90%] w-[60%] py-2 rounded-full font-bold active:shadow-[1px_1px_40px_0px_#0C7ABA]">
                 Collaborate with us!
               </button>
           </motion.div>
@@ -160,50 +177,64 @@ function Hero() {
       <div className=" bg-[#0d1616] text-white py-[5vh]" id='hero-section'>
         <motion.div className="m-[5vh] flex flex-col gap-5" 
         variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
-          <div id="header" className="text-3xl font-bold">
+          <div id="header" className="text-3xl font-bold ">
             WHO WE ARE
           </div>
           <div id="info" className="text-xl font-thin">
-            Consulting Finance & Analytics Club, IIT Indore, widely known as
-            CFA, is a premier student group operating under the Sci-Techl Board
-            of IIT Indore since 2019.
+          Established in 2019, the Consulting Finance & Analytics Club (CFA) at IIT Indore is a distinguished student organization under the Sci-Tech Board. CFA is dedicated to fostering expertise and innovation in consulting, finance, and data analytics.
           </div>
-          <div id="header" className="sm:text-3xl font-bold text-xl">
-            AAAAAAAAAAAAAAA
-          </div>
-          <hr />
+          <hr  />
         </motion.div>
 
-        <motion.div className="m-[5vh] flex flex-col gap-5" 
-        variants={right} animate={control} initial="hidden" whileInView="visible">
-          <div id="header" className="text-3xl font-bold">
-            WHO WE ARE
-          </div>
-          <div id="info" className="text-xl font-thin">
-            Consulting Finance & Analytics Club, IIT Indore, widely known as
-            CFA, is a premier student group operating under the Sci-Techl Board
-            of IIT Indore since 2019.
-          </div>
-          <div id="header" className="sm:text-3xl font-bold text-xl">
-            AAAAAAAAAAAAAAA
-          </div>
-          <hr />
-        </motion.div>
-
-        <motion.div className="m-[5vh] flex flex-col gap-5" 
+        <motion.div className="m-[5vh] flex flex-row gap-3" 
         variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
-          <div id="header" className="text-3xl font-bold">
-            WHO WE ARE
+          <div id="header" className="sm:text-3xl ml-[4vh] font-bold text-xl">
+            <img src={network} className="h-[60%] w-[70%]"/>
           </div>
-          <div id="info" className="text-xl font-thin">
-            Consulting Finance & Analytics Club, IIT Indore, widely known as
-            CFA, is a premier student group operating under the Sci-Techl Board
-            of IIT Indore since 2019.
+          <div>
+            <div id="header" className="text-3xl font-bold ">
+            OUR NETWORK
+            </div>
+            <div id="info" className="text-xl font-thin">
+            CFA serves as a dynamic hub for individuals with shared interests, facilitating connections through engaging 'knowledge-sessions'. By leveraging focus groups and expert interviews, we conduct in-depth research on key topics, thereby enhancing the skillsets of our members.
+            </div>
           </div>
-          <div id="header" className="sm:text-3xl font-bold text-xl">
-            AAAAAAAAAAAAAAA
+          
+        </motion.div>
+        <hr/>
+
+        <motion.div className="m-[5vh] flex flex-row gap-3" 
+        variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
+          <div id="header" className="sm:text-3xl ml-[4vh] font-bold text-xl">
+            <img src={hns} className="h-[60%] w-[70%]"/>
           </div>
-          <hr />
+          <div>
+            <div id="header" className="text-3xl font-bold ">
+            HANDS-ON LEARNING
+            </div>
+            <div id="info" className="text-xl font-thin">
+            CFA champions a practical learning approach within its core areas of Consulting, Finance, and Data Analytics. Our club supports this methodology by hosting a wide array of initiatives and events throughout the year, providing members with real-world experience and insights.
+
+            </div>
+          </div>
+          
+        </motion.div>
+        <hr/>
+
+        <motion.div className="m-[5vh] flex flex-row gap-3" 
+        variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
+          <div id="header" className="sm:text-3xl ml-[4vh] font-bold text-xl">
+            <img src={path} className="h-[50%] w-[60%]"/>
+          </div>
+          <div className="ml-[-3vh]">
+            <div id="header" className="text-3xl font-bold ">
+            FUTURE PATHWAYS
+            </div>
+            <div id="info" className="text-xl font-thin">
+            Our alumni carry forward the skills and experiences gained at CFA to excel in top-tier firms and esteemed institutions across diverse industries. Members have garnered recognition in various competitions.
+            </div>
+          </div>
+          
         </motion.div>
       </div>
     </>
