@@ -9,6 +9,8 @@
 .heading {
     color: white;
     margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bolder;
 }
 
 .imagesWrapper {
@@ -28,6 +30,12 @@
     height: 240px;
     object-fit: contain;
     border-radius: 50% /70%;
+    transition: transform 1s ease;
+}
+
+.animate :hover {
+    transform: translateY(-20px) scale(1.1);
+    cursor: pointer;
 }
 
 .imageTitle {
@@ -35,6 +43,11 @@
     color: #F5F5DC;
     font-weight: bold;
     margin-top: 10px;
+    transition: transform 0.4s ease;
+}
+
+.imageTitle:hover {
+    transform: scale(1.1);
 }
 
 /* Responsive Design */

@@ -9,6 +9,8 @@
 .heading {
     color: white;
     margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bolder;
 }
 
 .imagesWrapper {
@@ -24,10 +26,10 @@
 }
 
 .ellipticalImage {
-    width: 375px;
-    height: 240px;
-    object-fit: contain;
-    border-radius: 50% /70%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .imageTitle {
@@ -55,13 +57,18 @@
     color: white;
     padding: 10px;
     border-radius: 50px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.485);
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .ellipticalImage {
-        width: 300px;
-        height: 192px;
+        width: 250px;
+        height: 250px;
     }
 
     .imageTitle {
@@ -76,7 +83,7 @@
 @media (max-width: 768px) {
     .ellipticalImage {
         width: 200px;
-        height: 128px;
+        height: 200px;
     }
 
     .imageTitle {
@@ -102,7 +109,7 @@
     }
 
     .ellipticalImage {
-        width: 200px;
-        height: 128px;
+        width: 150px;
+        height: 150px;
     }
 }
