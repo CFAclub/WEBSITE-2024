@@ -21,10 +21,17 @@ export default function Subscribe() {
 
   const clickonsubscribe = (event) => {
     event.preventDefault();
-    setEmail("");
-    alert('Your email is successfully added to our mailing list!');
-    
+    if (email === "") {
+      alert('Please enter a valid email!');
+    } else {
+      subscribe(); 
+      setEmail("");
+      alert('Your email is successfully added to our mailing list!');
+    }
   };
+  
+    
+
   const cfaemail = "https://mail.google.com/mail/?view=cm&fs=1&to=cfa@iiti.ac.in&su=Requestto%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)";
   return (
     <>
