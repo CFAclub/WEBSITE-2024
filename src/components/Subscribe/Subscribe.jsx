@@ -3,6 +3,7 @@ import "../../styles/subscribe.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { warning } from "framer-motion";
 // import { db } from '../../utils/firebase';
 
 export default function Subscribe() {
@@ -21,7 +22,11 @@ export default function Subscribe() {
 
   const clickonsubscribe = (event) => {
     event.preventDefault();
-    if (email === "") {
+  
+    // Email validation regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    if (email === "" || !emailPattern.test(email)) {
       alert('Please enter a valid email!');
     } else {
       subscribe(); 
@@ -29,6 +34,7 @@ export default function Subscribe() {
       alert('Your email is successfully added to our mailing list!');
     }
   };
+  
   
     
 
