@@ -7,27 +7,27 @@ import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 
 export default function Subscribe() {
   const [email, setEmail] = useState("");
+
   const subscribe = async () => {
-      try {
-          const emailListRef = doc(db, 'emails', "emailList");
+    try {
+      const emailListRef = doc(db, 'emails', "emailList");
+      await updateDoc(emailListRef, {
+        emails: arrayUnion(email)
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
 
-          await updateDoc(emailListRef, {
-              emails: arrayUnion(email)
-          });
-      } catch (e) {
-          console.error("Error adding document: ", e);
-      }
-  }
-
+  const clickonsubscribe = (event) => {
+    event.preventDefault();
+    setEmail("");
+    alert('Your email is successfully added to our mailing list!');
+    
+  };
+  const cfaemail = "https://mail.google.com/mail/?view=cm&fs=1&to=cfa@iiti.ac.in&su=Requestto%20Collaborate%20with%20CFA%20Club%2CIIT%20Indore&body=Hi!%20I%20want%20to%20collaborate%20with%20CFA.%0D%0A%0D%0A(This%20mail%20was%20auto-generated)";
   return (
     <>
-      <div>
-        {/* <input type='text' onChange={(e) => { setEmail(e.target.value) }} />
-            <button onClick={() => { subscribe() }}>Subscribe</button>
-            <p>Are you looking for collaboration? Send an email </p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@gmail.com&su=Collaboration">Send an email</a> */}
-      </div>
-
       <div className="subcontainer">
         <div className="leftcontainer">
           <div className="leftcontainer1">
@@ -37,17 +37,15 @@ export default function Subscribe() {
                 type="email"
                 className="sub-input"
                 placeholder="Enter your email here"
-
-                onChange={(e) => { setEmail(e.target.value) }}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="btnsubscribe" type="submit" onClick={() => { subscribe() }}>
-                Subscribe
+              <button className="btnsubscribe" type="submit" onClick={clickonsubscribe}>
+                SUBSCRIBE
               </button>
             </div>
             <span>
-              To see your mailing preferences,click here.If you are using a work
-              email,you might need to whitelist cfa@iiti.ac.in to receive your
-              emails.
+            To set your mailing preferences, click here. If you are using a work email, you might need to whitelist cfa@iiti.ac.in to receive our emails.
             </span>
           </div>
         </div>
@@ -56,15 +54,11 @@ export default function Subscribe() {
             <div className="font-medium text-start text-white p-3">
               Are you looking forward to a collaboration? Send an email.
             </div>
-           <span id="mailtext" > 
-            <span >
-              <a href="mailto:cfa@iiti.ac.in">
+            <span id="mailtext">
+              <a href={cfaemail}>
                 <FontAwesomeIcon icon={faEnvelope} />
-              <span> | Send an email</span>
-            
-             
-            </a>
-            </span>
+                <span> | Send an Email</span>
+              </a>
             </span>
           </div>
         </div>

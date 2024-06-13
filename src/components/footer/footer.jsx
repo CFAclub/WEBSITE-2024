@@ -36,12 +36,12 @@ function Footer() {
               <br/>
              <FontAwesomeIcon icon={faPhone} /> Phone: 0731 243 8700
              <br/>
-              <FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:cfa@iiti.ac.in" className={styles.footerlinks}>cfa@iiti.ac.in</a>
+              <FontAwesomeIcon icon={faEnvelope} /> Email: <a href={cfaemail} className={styles.footerlinks}>cfa@iiti.ac.in</a>
               <br/>
-              <a href='https://www.instagram.com/cfaclub_iiti/' target='_blank'><span><FontAwesomeIcon icon={faInstagram} style={{height : '25px' , width : '25px' , margin : '4px 4px 4px -2px' , color :'white'}} className={styles.footerlinks}/></span></a>
-              <a href='https://www.linkedin.com/company/cfa-club-iit-indore/' target='_blank'><span><FontAwesomeIcon icon={faLinkedin} style={{height : '25px' , width : '25px' , margin : '4px' ,color :'white'}} className={styles.footerlinks}/></span></a>
              
-                
+              <a href='https://www.linkedin.com/company/cfa-club-iit-indore/' target='_blank'><span><FontAwesomeIcon icon={faLinkedin} style={{height : '25px' , width : '25px' , margin : '4px 4px 4px -2px' ,color :'white'}} className={styles.footerlinks}/></span></a>
+             
+              <a href='https://www.instagram.com/cfaclub_iiti/' target='_blank'><span><FontAwesomeIcon icon={faInstagram} style={{height : '25px' , width : '25px' , margin : '4px 4px 4px 0px' , color :'white'}} className={styles.footerlinks}/></span></a>
             </ul>
           </div>
 
