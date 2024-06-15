@@ -5,4 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [],
+  theme:{
+    extend:{
+      fontFamily: {
+        'montserrat':['Montserrat'],
+        'inter':['Inter'],
+      },
+    }
+  }
 }

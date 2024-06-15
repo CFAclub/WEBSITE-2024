@@ -74,10 +74,10 @@ function Hero() {
       <div className="text-white border-red-700 border-0 font-serif flex bg-black overflow-x-hidden" >
         {/* outermost flex-item-1 */}
         <div className={`border-0 border-green-600 sm:w-[50%] w-[100%]`}>
-          <motion.div id="heading" className="text-7xl my-[5vh] mx-[5vh] mb-[3vh]" 
+          <motion.div id="heading" className="text-7xl font-bold font-montserrat my-[5vh] mx-[5vh] mb-[3vh]" 
           variants={smaller_top} animate={control} initial="hidden" whileInView="visible">
             CFA Club
-            <div className="lg:block my-2 py-2 hidden font-bold text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text"
+            <div className="lg:block font-montserrat my-2 py-2 hidden font-bold text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text"
             >
               <Typewriter
                 words={['Consulting ...', 'Finance ...', 'Analytics ...',]}
@@ -92,13 +92,13 @@ function Hero() {
             </div>
            
           </motion.div>
-          <motion.div className=" w-[70%] text-xl mx-[5vh]"
+          <motion.div className=" w-[70%] text-xl mx-[5vh] font-inter"
           variants={smaller_top} animate={control} initial="hidden" whileInView="visible">
             We provide a platform for students to make a seamless transition into the world of Management Consulting, Finance and Data Analytics.
           </motion.div>
           
           
-          <motion.div className=" text-xl font-bold mx-[5vh] my-[5vh]" 
+          <motion.div className="font-inter text-2xl font-bold mx-[5vh] my-[5vh]" 
            variants={screen.width>=1000?left:right} animate={control} initial="hidden" whileInView="visible">
             FOLLOW US
             <div className="flex gap-3 my-4">
@@ -131,7 +131,7 @@ function Hero() {
             </a>
 
 
-          <motion.div id="collaborate-with-us" className="flex flex-col mx-[5vh] md:mb-[2vh] mb-[3vh] text-md md:text-xl" variants={right} animate={control} initial="hidden" whileInView="visible">
+          <motion.div id="collaborate-with-us" className="flex flex-col font-inter mx-[5vh] md:mb-[2vh] mb-[3vh] text-md md:text-xl" variants={right} animate={control} initial="hidden" whileInView="visible">
 
            
             
