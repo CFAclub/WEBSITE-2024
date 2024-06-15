@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Labrada:wght@500&family=Lobster&family=Playfair+Display&family=Raleway:wght@600&family=Roboto+Slab:wght@500&family=Sedan+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .galleryContainer {
     background-color: black;
@@ -33,7 +34,7 @@
 }
 
 .imageTitle {
-    font-family: "Sedan SC", serif;
+    font-family: "Montserrat", "Sedan SC", serif;
     color: #F5F5DC;
     font-weight: bold;
     margin-top: 10px;
@@ -44,7 +45,7 @@
 }
 
 .imageTitle2 {
-    font-family: "Sedan SC", serif;
+    font-family: "Montserrat", "Sedan SC", serif;
     color: #F5F5DC;
     font-weight: bold;
     margin-top: 3px;
