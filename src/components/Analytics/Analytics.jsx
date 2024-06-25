@@ -29,9 +29,9 @@ function Analytics() {
         </div>
       </div>
 
-      <div className="bg-indigo-950 text-white flex flex-col justify-between items-start w-full p-4">
-        <h2 className="text-4xl font-bold mt-4">WHAT WE DO</h2>
-        <p className="mt-6 mb-8 text-xl leading-relaxed">
+      <div className="bg-[#010C12] text-white flex flex-col justify-between items-start w-full ">
+        <h2 className="text-4xl font-bold p-4">WHAT WE DO</h2>
+        <p className=" mb-8 text-2xl leading-relaxed p-4">
         The DATA SCIENCE AND ANALYTICS division is dedicated to equipping students with the expertise needed to excel in the ever-evolving field of data analytics. Our vibrant community of data enthusiasts collaborates, learns, and grows together through various engaging activities and resources. We host a range of competitions and hackathons, designed to challenge members with complex data problems. Our hands-on approach enables members to work with real-world datasets, gaining practical experience directly applicable to their academic and professional pursuits.
 
         
@@ -39,22 +39,23 @@ function Analytics() {
           <br />
           <span className="text-sky-600 text-3xl font-bold drop-shadow-md">JOIN US</span> to enhance your skills, network with professionals, and prepare for a successful career  in data science and analytics.
         </p>
-        <h2 className="text-3xl font-bold mt-8">PROJECTS</h2>
+        <div className="bg-black text-white flex w-full h-full p-4">
+          <h2 className="text-3xl font-bold">PROJECTS</h2>
+        </div>
       </div>
 
-      <div className="bg-gray-200 flex flex-col justify-between w-full  h-[300px] p-4">
+      <div className="bg-gray-200 flex flex-col justify-between w-full h-[300px] p-4">
         <div className="flex justify-between items-end">
         </div>
       </div>
 
-      <div className="flex flex-col bg-black justify-between w-full  h-auto p-4">
+      <div className="flex flex-col bg-black justify-between w-full h-auto p-4">
         <div className="flex justify-between items-center mb-4">
           <div className="mr-auto">
             <Link to="/projects">
               <button 
                 className="bg-[#1A2D2C] text-white py-2 px-4 rounded-2xl transition-colors duration-300 hover:bg-blue-600"
                 style={{
-                  marginTop: '30px',
                   backgroundColor: '#1A2D2C',
                   fontWeight: 'bolder',
                   color: 'white',
@@ -70,18 +71,17 @@ function Analytics() {
             </Link>
           </div>
         </div>
-        <div className="text-center mb-4">
+        <div className="text-center mb-1">
           <h2 className="text-4xl font-bold text-white">ACCESS RESOURCES</h2>
-          <div className="w-full flex justify-center items-center h-[300px] bg-gray-500 mt-4 rounded-lg">
-            <span className="text-white text-2xl">Coming Soon....</span>
+          <div className="w-full flex justify-center items-center h-[300px] bg-gray-200 mt-5">
+            <span className="text-gray-400 text-4xl font-bold">COMING SOON...</span>
           </div>
         </div>
-        <div className="mt-auto flex justify-center">
+        <div className="mt-auto flex justify-center mb-4">
           <Link to="/team">
             <button 
               className="bg-[#1A2D2C] text-white py-2 px-4 rounded-2xl transition-colors duration-300 hover:bg-blue-600 mt-4"
               style={{
-                marginTop: '30px',
                 backgroundColor: '#1A2D2C',
                 fontWeight: 'bolder',
                 color: 'white',
@@ -100,5 +100,6 @@ function Analytics() {
     </div>
   );
 }
+
 
 export default Analytics;

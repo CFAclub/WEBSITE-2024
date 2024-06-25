@@ -29,9 +29,9 @@ function Consulting() {
         </div>
       </div>
 
-      <div className="bg-teal-950 text-white flex flex-col justify-between items-start w-full p-4">
-        <h2 className="text-4xl font-bold mt-4">WHAT WE DO</h2>
-        <p className="mt-6 mb-8 text-xl leading-relaxed">
+      <div className="bg-[#00100B] text-white flex flex-col justify-between items-start w-full ">
+        <h2 className="text-4xl font-bold mt-2 p-4">WHAT WE DO</h2>
+        <p className="text-2xl leading-relaxed p-4">
           The CONSULTING AND PM division unites students with a professional interest in consulting and product management. 
           Through diverse events and activities, we cultivate a thriving culture for aspiring consultants and product managers. 
           We organize competitions, case studies, interactive workshops, jam sessions, guesstimates and more, catering to both 
@@ -43,7 +43,9 @@ function Consulting() {
           <br />
           <span className="text-green-500 text-3xl font-bold drop-shadow-md">JOIN US</span> to enhance your skills, network with professionals, and prepare for a successful career in consulting and product management.
         </p>
-        <h2 className="text-3xl font-bold mt-8">PROJECTS</h2>
+        <div className="bg-black text-white flex w-full h-full p-4">
+          <h2 className="text-3xl font-bold">PROJECTS</h2>
+        </div>
       </div>
 
       <div className="bg-gray-200 flex flex-col justify-between w-full h-[300px] p-4">
@@ -58,7 +60,6 @@ function Consulting() {
               <button 
                 className="bg-[#1A2D2C] text-white py-2 px-4 rounded-2xl transition-colors duration-300 hover:bg-blue-600"
                 style={{
-                  marginTop: '30px',
                   backgroundColor: '#1A2D2C',
                   fontWeight: 'bolder',
                   color: 'white',
@@ -74,18 +75,17 @@ function Consulting() {
             </Link>
           </div>
         </div>
-        <div className="text-center mb-4">
+        <div className="text-center mb-1">
           <h2 className="text-4xl font-bold text-white">ACCESS RESOURCES</h2>
-          <div className="w-full flex justify-center items-center h-[300px] bg-gray-500 mt-4 rounded-lg">
-            <span className="text-white text-2xl">Coming Soon....</span>
+          <div className="w-full flex justify-center items-center h-[300px] bg-gray-200 mt-5">
+            <span className="text-gray-400 text-4xl font-bold">COMING SOON...</span>
           </div>
         </div>
-        <div className="mt-auto flex justify-center">
+        <div className="mt-auto flex justify-center mb-4">
           <Link to="/team">
             <button 
               className="bg-[#1A2D2C] text-white py-2 px-4 rounded-2xl transition-colors duration-300 hover:bg-blue-600 mt-4"
               style={{
-                marginTop: '30px',
                 backgroundColor: '#1A2D2C',
                 fontWeight: 'bolder',
                 color: 'white',
