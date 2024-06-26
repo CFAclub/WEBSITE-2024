@@ -34,8 +34,8 @@ function Footer() {
             <ul>
               <FontAwesomeIcon icon={faMapMarkerAlt} /> <a href="http://iiti.ac.in" target="_blank" rel="noopener noreferrer" className={styles.footerlinks}> Indian Institute of Technology Indore<br/>Madhya Pradesh India - 453552 </a>
               <br/>
-             <FontAwesomeIcon icon={faPhone} /> Phone: 0731 243 8700
-             <br/>
+             {/* <FontAwesomeIcon icon={faPhone} /> Phone: 0731 243 8700
+             <br/> */}
               <FontAwesomeIcon icon={faEnvelope} /> Email: <a href={cfaemail} className={styles.footerlinks}>cfa@iiti.ac.in</a>
               <br/>
              
