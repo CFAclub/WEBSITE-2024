@@ -6,7 +6,7 @@ import Shivam from '../../assets/Shivam.jpg';
 import Samridhi from '../../assets/Samridhi.jpg';
 import Aadarsh from '../../assets/aadi.jpg'
 import Akshat from '../../assets/Akshat.jpg'
-
+import Dikshitsuthar from '../../assets/Dikshitsuthar.png'
 
 export const CombinedData = [
   {
@@ -75,10 +75,10 @@ export const CombinedData = [
   },
   {
     id: 9,
-    name: '',
-    instagram: '',
-    linkedin: '',
-    
+    name: 'Dikshit Suthar',
+    instagram: 'https://www.instagram.com/dikshit_suthar_57/',
+    linkedin: 'https://www.linkedin.com/in/dikshit-suthar-289459250/',
+    image_url: Dikshitsuthar,
     role: 'WebDev',
   },
   {
