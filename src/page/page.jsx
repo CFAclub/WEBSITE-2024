@@ -9,6 +9,7 @@ import Projects from './projects'
 import Resources from './resources'
 import Team from './team'
 import Gallery from './gallery'
+import Fin from './finance/Fin.jsx'
 
 function Page() {
   return (
@@ -23,6 +24,7 @@ function Page() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/fin" element={<Fin />} />
         </Routes>
       </Router>
       </>
